@@ -1,0 +1,15 @@
+{
+    "env": {
+        "PORT": "8080",
+        "PATH_PRODUCTION": "/",
+        "API_URL": "https://your-api-url.com/"
+    },
+    "version": 2,
+	"name": "blockchain-ico",
+    "builds": [
+        { "src": "dist/**/*", "use": "@now/static" }
+    ],
+    "routes": [
+        { "src": "/(.*)", "dest": "/dist/$1" }
+    ]
+}
