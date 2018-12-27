@@ -1,0 +1,8 @@
+{
+  "name": "blockchain-ico",
+  "version": "0.0.1",
+  "description": "A demo visualization of an ico",
+  "main": "index.js",
+  "author": "Egor Kirpichev",
+  "license": "MIT"
+}
