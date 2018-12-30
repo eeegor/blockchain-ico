@@ -26,6 +26,12 @@ export const Button = styled.button`
   }
 
   ${props =>
+		props.noShadow &&
+		`
+		box-shadow: none !important;
+  `}
+  
+  ${props =>
 		props.selected &&
 		`
 		color: #fff;

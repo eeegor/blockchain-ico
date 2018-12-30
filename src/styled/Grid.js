@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from './theme';
+import { helperMargin } from './helperMargin';
 
 export const makeMobileColumns = columns => {
 	if (columns && columns[0]) {
@@ -51,4 +52,6 @@ export const Grid = styled.div`
 			1fr
 		);
 	}
+
+	${props => helperMargin(props)}
 `;

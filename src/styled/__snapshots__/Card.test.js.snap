@@ -13,8 +13,6 @@ exports[`Card renders card 1`] = `
   border-radius: 4px;
   background: #fff;
   box-shadow: 2px 4px 5px rgba(0,14,70,.17);
-  display: grid;
-  grid-template-columns: 52px auto;
 }
 
 <div
@@ -37,8 +35,6 @@ exports[`Card renders card with no background 1`] = `
   border-radius: 4px;
   background: #fff;
   box-shadow: 2px 4px 5px rgba(0,14,70,.17);
-  display: grid;
-  grid-template-columns: 52px auto;
   background: none !important;
   border: none !important;
   box-shadow: none !important;

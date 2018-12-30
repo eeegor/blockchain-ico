@@ -13,8 +13,13 @@ export const Card = styled.div`
 	border-radius: 4px;
 	background: #fff;
 	box-shadow: ${theme.shadows.medium};
-	display: grid;
-	grid-template-columns: 52px auto;
+
+	${props =>
+		props.withIcon &&
+		`
+		display: grid;
+		grid-template-columns: 52px auto;
+  `}
 
 	${props =>
 		props.noBg &&

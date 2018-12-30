@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardBody renders card body 1`] = `
+<div
+  className=""
+>
+  Hello
+</div>
+`;
+
+exports[`CardBody renders card body with custom padding 1`] = `
+.c0 {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+<div
+  className="c0"
+>
+  Hello
+</div>
+`;

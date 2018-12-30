@@ -1,6 +1,5 @@
 import React from 'react';
 import { theme } from '../styled/theme';
-import { GlobalStyle } from '../styled/GlobalStyle';
 import {
 	H1,
 	H2,
@@ -19,21 +18,20 @@ import {
 	Card,
 	A,
 	TextSmall,
-	CardIcon,
+	CardIcon
 } from '../styled';
-import { 
-	Logo, 
+import {
+	Logo,
 	ArrowLeft,
 	IconEtherium,
 	IconBitcoin,
-	IconLitecoin 
+	IconLitecoin
 } from '../components';
 
 export const Styleguide = () => {
 	const { colors } = theme;
 	return (
 		<div className="styleguide">
-			<GlobalStyle />
 			<Header>
 				<Container center>
 					<Logo color={colors.primaryDarkBlue} />
@@ -120,49 +118,45 @@ export const Styleguide = () => {
 				<Container>
 					<H2 marginBottom={24}>Cards</H2>
 					<Grid columns={3}>
-						<Card>
+						<Card withIcon>
 							<CardIcon>
 								<IconEtherium />
 							</CardIcon>
 							<div>
-								<TitleUppercase>
-									Etherium
-								</TitleUppercase>
+								<TitleUppercase>Etherium</TitleUppercase>
 								<TextSmall marginBottom={8}>
-									Buy in the Top 10 cryptocurrencies rely on the market instead of
+									Buy in the Top 10 cryptocurrencies rely on
+									the market instead of
 								</TextSmall>
 								<A href="#">
 									Read more <ArrowLeft />
 								</A>
 							</div>
 						</Card>
-						<Card noBg>
+						<Card noBg withIcon>
 							<CardIcon>
 								<IconBitcoin />
 							</CardIcon>
 							<div>
-								<TitleUppercase>
-									Bitcoin
-								</TitleUppercase>
+								<TitleUppercase>Bitcoin</TitleUppercase>
 								<TextSmall marginBottom={8}>
-									ETFs outperform mutual funds. They are the perfect way to invest in
+									ETFs outperform mutual funds. They are the
+									perfect way to invest in
 								</TextSmall>
 								<A href="#">
 									Read more <ArrowLeft />
 								</A>
 							</div>
 						</Card>
-						<Card noBg>
+						<Card noBg withIcon>
 							<CardIcon>
 								<IconLitecoin />
 							</CardIcon>
 							<div>
-								<TitleUppercase>
-									Litecoin
-								</TitleUppercase>
+								<TitleUppercase>Litecoin</TitleUppercase>
 								<TextSmall marginBottom={8}>
-									Buy Real Estate in form of Funds or REITS and
-									get your monthly rent
+									Buy Real Estate in form of Funds or REITS
+									and get your monthly rent
 								</TextSmall>
 								<A href="#">
 									Read more <ArrowLeft />

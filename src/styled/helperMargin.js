@@ -1,30 +1,47 @@
-const minZero = value => (parseInt(value, 10) && value > 0 ? `${value}px` : 0);
+const parseNumber = value =>
+	parseInt(value, 10) ? `${value}px !important` : '0 !important';
 
 export const helperMargin = props => {
-	if (props.margin) {
-		return `margin: ${minZero(props.margin)} !important;`;
-	}
-	if (props.marginTop) {
-		return `margin-top: ${minZero(props.marginTop)} !important;`;
-	}
-	if (props.marginBottom) {
-		return `margin-bottom: ${minZero(props.marginBottom)} !important;`;
-	}
-	if (props.marginLeft) {
-		return `margin-left: ${minZero(props.marginLeft)} !important;`;
-	}
-	if (props.marginRight) {
-		return `margin-right: ${minZero(props.marginRight)} !important;`;
-	}
-	if (props.marginX) {
-		return `margin-left: ${minZero(
-			props.marginX
-		)} !important; margin-right: ${minZero(props.marginX)} !important;`;
-	}
-	if (props.marginY) {
-		return `margin-top: ${minZero(
-			props.marginY
-		)} !important; margin-bottom: ${minZero(props.marginY)} !important;`;
-	}
-	return undefined;
+	const nextMargin = [];
+	Object.keys(props).map(key => {
+		if (key === 'margin') {
+			return nextMargin.push(`margin: ${parseNumber(props.margin)};`);
+		}
+		if (key === 'marginTop') {
+			return nextMargin.push(
+				`margin-top: ${parseNumber(props.marginTop)};`
+			);
+		}
+		if (key === 'marginBottom') {
+			return nextMargin.push(
+				`margin-bottom: ${parseNumber(props.marginBottom)};`
+			);
+		}
+		if (key === 'marginLeft') {
+			return nextMargin.push(
+				`margin-left: ${parseNumber(props.marginLeft)};`
+			);
+		}
+		if (key === 'marginRight') {
+			return nextMargin.push(
+				`margin-right: ${parseNumber(props.marginRight)};`
+			);
+		}
+		if (key === 'marginX') {
+			return nextMargin.push(
+				`margin-left: ${parseNumber(
+					props.marginX
+				)}; margin-right: ${parseNumber(props.marginX)};`
+			);
+		}
+		if (key === 'marginY') {
+			return nextMargin.push(
+				`margin-top: ${parseNumber(
+					props.marginY
+				)}; margin-bottom: ${parseNumber(props.marginY)};`
+			);
+		}
+		return '';
+	});
+	return nextMargin.join(' ');
 };

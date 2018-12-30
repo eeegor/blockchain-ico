@@ -16,6 +16,7 @@ import { Header } from './Header';
 import { Content } from './Content';
 import { Card } from './Card';
 import { CardIcon } from './CardIcon';
+import { CardBody } from './CardBody';
 
 export {
 	H1,
@@ -35,5 +36,6 @@ export {
 	Header,
 	Content,
 	Card,
-	CardIcon
+	CardIcon,
+	CardBody
 };
