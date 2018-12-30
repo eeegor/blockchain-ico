@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { theme } from './theme';
 import { helperMargin } from './helperMargin';
+import { theme } from './theme';
 
 export const H1 = styled.h1`
 	font-size: 34px;

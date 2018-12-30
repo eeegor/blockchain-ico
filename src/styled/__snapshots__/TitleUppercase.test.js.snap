@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleUppercase renders default h1 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: GTCinetype-Bold;
+  margin-bottom: 12px;
+  color: #101530;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+}
+
+<h2
+  className="c0"
+>
+  Title
+</h2>
+`;
+
+exports[`TitleUppercase renders h1 with custom color 1`] = `
+.c0 {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: GTCinetype-Bold;
+  margin-bottom: 12px;
+  color: #101530;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  color: green;
+}
+
+<h2
+  className="c0"
+  color="green"
+>
+  Title
+</h2>
+`;

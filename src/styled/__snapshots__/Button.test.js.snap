@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders button 1`] = `
+.c0 {
+  cursor: pointer;
+  border: 1px solid #ebf0ff;
+  outline: 0;
+  background: #fff;
+  color: #2B60FF;
+  padding: 0.75rem 3rem;
+  border-radius: 4px;
+  font-size: 13px;
+  -webkit-letter-spacing: 1.18px;
+  -moz-letter-spacing: 1.18px;
+  -ms-letter-spacing: 1.18px;
+  letter-spacing: 1.18px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: GTCinetype-Bold;
+  box-shadow: 0 14px 17px rgba(0,4,18,.16);
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #003ef7;
+  border-color: #003ef7;
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`Button renders danger button 1`] = `
+.c0 {
+  cursor: pointer;
+  border: 1px solid #ebf0ff;
+  outline: 0;
+  background: #fff;
+  color: #2B60FF;
+  padding: 0.75rem 3rem;
+  border-radius: 4px;
+  font-size: 13px;
+  -webkit-letter-spacing: 1.18px;
+  -moz-letter-spacing: 1.18px;
+  -ms-letter-spacing: 1.18px;
+  letter-spacing: 1.18px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: GTCinetype-Bold;
+  box-shadow: 0 14px 17px rgba(0,4,18,.16);
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  color: #fff;
+  background: #F54269;
+  border: 1px solid #F54269;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #003ef7;
+  border-color: #003ef7;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #f21243;
+  border-color: #f21243;
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`Button renders outline button 1`] = `
+.c0 {
+  cursor: pointer;
+  border: 1px solid #ebf0ff;
+  outline: 0;
+  background: #fff;
+  color: #2B60FF;
+  padding: 0.75rem 3rem;
+  border-radius: 4px;
+  font-size: 13px;
+  -webkit-letter-spacing: 1.18px;
+  -moz-letter-spacing: 1.18px;
+  -ms-letter-spacing: 1.18px;
+  letter-spacing: 1.18px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: GTCinetype-Bold;
+  box-shadow: 0 14px 17px rgba(0,4,18,.16);
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  color: #2B60FF;
+  background: none;
+  border: 1px solid #2B60FF;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #003ef7;
+  border-color: #003ef7;
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`Button renders primary button 1`] = `
+.c0 {
+  cursor: pointer;
+  border: 1px solid #ebf0ff;
+  outline: 0;
+  background: #fff;
+  color: #2B60FF;
+  padding: 0.75rem 3rem;
+  border-radius: 4px;
+  font-size: 13px;
+  -webkit-letter-spacing: 1.18px;
+  -moz-letter-spacing: 1.18px;
+  -ms-letter-spacing: 1.18px;
+  letter-spacing: 1.18px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: GTCinetype-Bold;
+  box-shadow: 0 14px 17px rgba(0,4,18,.16);
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  color: #fff;
+  background: #2B60FF;
+  border: 1px solid #2B60FF;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #003ef7;
+  border-color: #003ef7;
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`Button renders selected button 1`] = `
+.c0 {
+  cursor: pointer;
+  border: 1px solid #ebf0ff;
+  outline: 0;
+  background: #fff;
+  color: #2B60FF;
+  padding: 0.75rem 3rem;
+  border-radius: 4px;
+  font-size: 13px;
+  -webkit-letter-spacing: 1.18px;
+  -moz-letter-spacing: 1.18px;
+  -ms-letter-spacing: 1.18px;
+  letter-spacing: 1.18px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: GTCinetype-Bold;
+  box-shadow: 0 14px 17px rgba(0,4,18,.16);
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  color: #fff;
+  background: #2B60FF;
+  border: 1px solid #2B60FF;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #003ef7;
+  border-color: #003ef7;
+}
+
+<button
+  className="c0"
+  selected={true}
+/>
+`;
+
+exports[`Button renders success button 1`] = `
+.c0 {
+  cursor: pointer;
+  border: 1px solid #ebf0ff;
+  outline: 0;
+  background: #fff;
+  color: #2B60FF;
+  padding: 0.75rem 3rem;
+  border-radius: 4px;
+  font-size: 13px;
+  -webkit-letter-spacing: 1.18px;
+  -moz-letter-spacing: 1.18px;
+  -ms-letter-spacing: 1.18px;
+  letter-spacing: 1.18px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: GTCinetype-Bold;
+  box-shadow: 0 14px 17px rgba(0,4,18,.16);
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  color: #fff;
+  background: #3BE3AE;
+  border: 1px solid #3BE3AE;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #003ef7;
+  border-color: #003ef7;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #1dce96;
+  border-color: #1dce96;
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`Button renders token button 1`] = `
+.c0 {
+  cursor: pointer;
+  border: 1px solid #ebf0ff;
+  outline: 0;
+  background: #fff;
+  color: #2B60FF;
+  padding: 0.75rem 3rem;
+  border-radius: 4px;
+  font-size: 13px;
+  -webkit-letter-spacing: 1.18px;
+  -moz-letter-spacing: 1.18px;
+  -ms-letter-spacing: 1.18px;
+  letter-spacing: 1.18px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: GTCinetype-Bold;
+  box-shadow: 0 14px 17px rgba(0,4,18,.16);
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  color: #fff;
+  border: 1px solid #6947FF;
+  background: #6947FF;
+  background: linear-gradient(45deg,#6947FF 0%,#602BFF 100%);
+  position: relative;
+  z-index: 2;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #003ef7;
+  border-color: #003ef7;
+}
+
+.c0:before {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  content: '';
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  z-index: -1;
+}
+
+.c0:hover {
+  color: #fff;
+  border: 1px solid #6947FF;
+  background: #6947FF;
+  background: linear-gradient(45deg,#6947FF 0%,#602BFF 100%);
+}
+
+.c0:hover:before {
+  opacity: 0.2;
+}
+
+<button
+  className="c0"
+/>
+`;

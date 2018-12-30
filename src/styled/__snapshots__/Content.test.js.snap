@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content renders content 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: no-wrap;
+  -ms-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: scroll;
+  overflowscrolling: touch;
+  webkitoverflowscrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 0;
+  overflow: hidden;
+  background: #F6F7FB;
+  padding: 4rem 0;
+  -webkit-overflow-scrolling: touch;
+  z-index: 5000;
+}
+
+<div
+  className="c0"
+>
+  Content
+</div>
+`;
+
+exports[`Content renders content with top offset 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: no-wrap;
+  -ms-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: scroll;
+  overflowscrolling: touch;
+  webkitoverflowscrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 0;
+  overflow: hidden;
+  background: #F6F7FB;
+  padding: 4rem 0;
+  -webkit-overflow-scrolling: touch;
+  z-index: 5000;
+  margin-top: 100px;
+}
+
+@media (min-width:767px) {
+  .c0 {
+    margin-top: undefinedpx;
+  }
+}
+
+<div
+  className="c0"
+>
+  Content
+</div>
+`;
+
+exports[`Content renders content with top offset 2`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: no-wrap;
+  -ms-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: scroll;
+  overflowscrolling: touch;
+  webkitoverflowscrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 0;
+  overflow: hidden;
+  background: #F6F7FB;
+  padding: 4rem 0;
+  -webkit-overflow-scrolling: touch;
+  z-index: 5000;
+  margin-top: 100px;
+}
+
+@media (min-width:767px) {
+  .c0 {
+    margin-top: 200px;
+  }
+}
+
+<div
+  className="c0"
+>
+  Content
+</div>
+`;

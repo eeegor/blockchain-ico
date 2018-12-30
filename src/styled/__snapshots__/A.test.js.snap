@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A renders a tag 1`] = `
+.c0 {
+  font-size: 16px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+  font-family: GTCinetype-Regular;
+  color: #2B60FF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  color: red !important;
+}
+
+.c0:hover {
+  color: #0031c4;
+}
+
+<a
+  className="c0"
+  color="red"
+/>
+`;

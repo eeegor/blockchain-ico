@@ -35,5 +35,5 @@ export {
 	Header,
 	Content,
 	Card,
-	CardIcon,
+	CardIcon
 };

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 import { theme } from './theme';
 import { helperMargin } from './helperMargin';
-import { darken } from 'polished';
 
 export const A = styled.a`
 	font-size: 16px;

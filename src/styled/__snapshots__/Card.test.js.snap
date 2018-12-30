@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders card 1`] = `
+.c0 {
+  padding: 12px;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  border: 1px solid #fff2;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 2px 4px 5px rgba(0,14,70,.17);
+  display: grid;
+  grid-template-columns: 52px auto;
+}
+
+<div
+  className="c0"
+>
+  Hello
+</div>
+`;
+
+exports[`Card renders card with no background 1`] = `
+.c0 {
+  padding: 12px;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  border: 1px solid #fff2;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 2px 4px 5px rgba(0,14,70,.17);
+  display: grid;
+  grid-template-columns: 52px auto;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+<div
+  className="c0"
+>
+  Hello
+</div>
+`;

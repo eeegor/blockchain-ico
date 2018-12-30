@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconEtherium renders IconEtherium 1`] = `
+<svg
+  height={26}
+  version="1.1"
+  viewBox="0 0 26 26"
+  width={26}
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <linearGradient
+      id="linearGradient-1"
+      x1="100%"
+      x2="0%"
+      y1="0%"
+      y2="100%"
+    >
+      <stop
+        offset="0%"
+        stopColor="#386AFF"
+      />
+      <stop
+        offset="100%"
+        stopColor="#2652FF"
+      />
+    </linearGradient>
+    <linearGradient
+      id="linearGradient-2"
+      x1="100%"
+      x2="0%"
+      y1="0%"
+      y2="100%"
+    >
+      <stop
+        offset="0%"
+        stopColor="#2B59FF"
+      />
+      <stop
+        offset="100%"
+        stopColor="#619BFF"
+      />
+    </linearGradient>
+  </defs>
+  <g
+    fill="none"
+    fillRule="evenodd"
+    id="icon_etherium"
+    stroke="none"
+    strokeWidth="1"
+  >
+    <g
+      id="Group"
+      transform="translate(5.200000, -0.000000)"
+    >
+      <polygon
+        fill="url(#linearGradient-1)"
+        id="Path-21"
+        opacity="0.5"
+        points="0 12.5885087 7.29627095 17.4020237 14.908923 12.5677507 7.29840534 0"
+      />
+      <polygon
+        fill="url(#linearGradient-2)"
+        id="Path-22"
+        points="0 14.2415502 7.47530612 25.2014603 14.9705678 14.2415502 7.47530612 19.1492356"
+      />
+    </g>
+  </g>
+</svg>
+`;

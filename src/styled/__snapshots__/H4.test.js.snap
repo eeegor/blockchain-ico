@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H4 renders default h1 1`] = `
+.c0 {
+  font-size: 18px;
+  line-height: 33px;
+  font-family: GTCinetype-Light;
+  margin-bottom: 12px;
+}
+
+<h4
+  className="c0"
+>
+  Title
+</h4>
+`;
+
+exports[`H4 renders h1 with custom color 1`] = `
+.c0 {
+  font-size: 18px;
+  line-height: 33px;
+  font-family: GTCinetype-Light;
+  margin-bottom: 12px;
+  color: green;
+}
+
+<h4
+  className="c0"
+  color="green"
+>
+  Title
+</h4>
+`;

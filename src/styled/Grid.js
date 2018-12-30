@@ -1,26 +1,28 @@
 import styled from 'styled-components';
 import { theme } from './theme';
 
-const makeMobileColumns = columns => {
+export const makeMobileColumns = columns => {
 	if (columns && columns[0]) {
 		return columns[0];
 	}
 	return 1;
 };
 
-const makeTabletColumns = columns => {
+export const makeTabletColumns = columns => {
 	if (columns && columns[1]) {
 		return columns[1];
-	} else if (columns) {
+	}
+	if (columns) {
 		return columns[columns.length - 1] || columns;
 	}
 	return 1;
 };
 
-const makeDesktopColumns = columns => {
+export const makeDesktopColumns = columns => {
 	if (columns && columns[2]) {
 		return columns[2];
-	} else if (columns) {
+	}
+	if (columns) {
 		return columns[columns.length - 1] || columns;
 	}
 	return 1;

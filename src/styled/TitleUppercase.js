@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { theme } from './theme';
 import { helperMargin } from './helperMargin';
+import { theme } from './theme';
 
 export const TitleUppercase = styled.h2`
 	font-size: 16px;

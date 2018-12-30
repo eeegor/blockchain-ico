@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H5 renders default h1 1`] = `
+.c0 {
+  font-size: 17px;
+  line-height: 25px;
+  font-family: GTCinetype-Light;
+  margin-bottom: 12px;
+}
+
+<h5
+  className="c0"
+>
+  Title
+</h5>
+`;
+
+exports[`H5 renders h1 with custom color 1`] = `
+.c0 {
+  font-size: 17px;
+  line-height: 25px;
+  font-family: GTCinetype-Light;
+  margin-bottom: 12px;
+  color: green;
+}
+
+<h5
+  className="c0"
+  color="green"
+>
+  Title
+</h5>
+`;

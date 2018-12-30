@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H1 renders default h1 1`] = `
+.c0 {
+  font-size: 34px;
+  line-height: 51px;
+  font-family: Rubik-Regular;
+  margin-bottom: 12px;
+}
+
+<h1
+  className="c0"
+>
+  Title
+</h1>
+`;
+
+exports[`H1 renders h1 with custom color 1`] = `
+.c0 {
+  font-size: 34px;
+  line-height: 51px;
+  font-family: Rubik-Regular;
+  margin-bottom: 12px;
+  color: green;
+}
+
+<h1
+  className="c0"
+  color="green"
+>
+  Title
+</h1>
+`;
