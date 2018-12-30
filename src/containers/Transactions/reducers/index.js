@@ -8,26 +8,26 @@ import { actions } from '../actions';
  */
 
 export const transactionReducer = (state = {}, action) => {
-	// console.log(action.type, action);
-
 	const { payload } = action;
 
 	switch (action.type) {
 		case actions.GET_TRANSACTIONS_REQUEST:
+		case actions.GET_TRANSACTIONS_META_REQUEST:
 			return {
 				...state
 			};
 
 		case actions.GET_TRANSACTIONS_SUCCESS:
+		case actions.GET_TRANSACTIONS_META_SUCCESS:
 			return {
 				...state,
 				data: payload.data
 			};
 
 		case actions.GET_TRANSACTIONS_ERROR:
+		case actions.GET_TRANSACTIONS_META_ERROR:
 			return {
-				...state,
-				data: []
+				...state
 			};
 
 		case actions.SET_TRANSACTIONS_STAGE:

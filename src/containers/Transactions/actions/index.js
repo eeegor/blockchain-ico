@@ -5,6 +5,15 @@ import {
 	getTransactionsSuccess,
 	getTransactionsError
 } from './getTransactions';
+
+import {
+	getTransactionsMetaActions,
+	getTransactionsMeta,
+	getTransactionsMetaRequest,
+	getTransactionsMetaSuccess,
+	getTransactionsMetaError
+} from './getTransactionsMeta';
+
 import {
 	setTransactionStageActions,
 	setTransactionStage
@@ -12,6 +21,7 @@ import {
 
 export const actions = {
 	...getTransactionsActions,
+	...getTransactionsMetaActions,
 	...setTransactionStageActions
 };
 
@@ -20,5 +30,9 @@ export {
 	getTransactionsRequest,
 	getTransactionsSuccess,
 	getTransactionsError,
-	setTransactionStage
+	setTransactionStage,
+	getTransactionsMeta,
+	getTransactionsMetaRequest,
+	getTransactionsMetaSuccess,
+	getTransactionsMetaError
 };

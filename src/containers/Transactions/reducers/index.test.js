@@ -18,8 +18,32 @@ describe('transaction reducer', () => {
 		const nextState = transactionReducer(undefined, {
 			type: actions.GET_TRANSACTIONS_ERROR
 		});
+		expect(nextState).toEqual({});
+	});
+
+	it('handles get transactions success', () => {
+		const nextState = transactionReducer(undefined, {
+			type: actions.GET_TRANSACTIONS_SUCCESS,
+			payload: {
+				data: [
+					{
+						value: 1,
+						currency: 'ETH',
+						txid: '2329332hu3huhu',
+						address: '2332j3jnjnj'
+					}
+				]
+			}
+		});
 		expect(nextState).toEqual({
-			data: []
+			data: [
+				{
+					value: 1,
+					currency: 'ETH',
+					txid: '2329332hu3huhu',
+					address: '2332j3jnjnj'
+				}
+			]
 		});
 	});
 
@@ -45,9 +69,23 @@ describe('transaction reducer', () => {
 		});
 	});
 
-	it('handles get transactions success', () => {
+	it('handles get transactions meta', () => {
 		const nextState = transactionReducer(undefined, {
-			type: actions.GET_TRANSACTIONS_SUCCESS,
+			type: actions.GET_TRANSACTIONS_META_REQUEST
+		});
+		expect(nextState).toEqual({});
+	});
+
+	it('handles get transactions meta error', () => {
+		const nextState = transactionReducer(undefined, {
+			type: actions.GET_TRANSACTIONS_META_ERROR
+		});
+		expect(nextState).toEqual({});
+	});
+
+	it('handles get transactions meta success', () => {
+		const nextState = transactionReducer(undefined, {
+			type: actions.GET_TRANSACTIONS_META_SUCCESS,
 			payload: {
 				data: [
 					{

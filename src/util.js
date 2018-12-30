@@ -1,5 +1,26 @@
 import moment from 'moment';
 
+/**
+ *
+ * Calculate sum
+ */
+
+export const formatValue = (value, currency, format = null) => {
+	const btc = value / 100000000;
+	const ltc = value / 100000000;
+	const eth = value / 1000000000000000000;
+	switch (currency) {
+		case 'BTC':
+			return format === 'USD' ? btc * 3883.81 : btc;
+		case 'LTC':
+			return format === 'USD' ? ltc * 32.1 : ltc;
+		case 'ETH':
+			return format === 'USD' ? eth * 140.74 : eth;
+		default:
+			return value;
+	}
+};
+
 export const sortByKey = (array, key) =>
 	array.sort((a, b) => {
 		const x = a[key];
@@ -36,25 +57,41 @@ export const mergeData = data => {
 		.sort((a, b) => a.txid > b.txid);
 };
 
-/**
- *
- * Calculate sum
- */
+export const mergeMeta = (meta, localData) => {
+	const merged = {};
+	// eslint-disable-next-line no-unused-expressions
+	localData &&
+		localData.forEach(transaction => {
+			const { txid } = transaction;
+			if (!meta[txid]) {
+				return;
+			}
+			merged[txid] = {
+				...transaction,
+				...(meta[txid] || {}),
+				confirmed: new Date(meta[txid].confirmed),
+				received: new Date(meta[txid].received)
+			};
+		});
 
-export const formatValue = (value, currency, format = null) => {
-	const btc = value / 100000000;
-	const ltc = value / 100000000;
-	const eth = value / 1000000000000000000;
-	switch (currency) {
-		case 'BTC':
-			return format === 'USD' ? btc * 3883.81 : btc;
-		case 'LTC':
-			return format === 'USD' ? ltc * 32.1 : ltc;
-		case 'ETH':
-			return format === 'USD' ? eth * 140.74 : eth;
-		default:
-			return value;
-	}
+	let sum = 0;
+	return sortByDate(
+		Object.keys(merged).map(txid => merged[txid]),
+		'received'
+	).map(sorted => {
+		const usd = parseFloat(
+			formatValue(sorted.value, sorted.currency, 'USD')
+		);
+		sum += usd;
+		return {
+			...sorted,
+			normalizedValue: parseFloat(
+				formatValue(sorted.value, sorted.currency).toFixed(4)
+			),
+			usd,
+			sum
+		};
+	});
 };
 
 /**

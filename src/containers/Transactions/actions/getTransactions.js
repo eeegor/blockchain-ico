@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { mergeData } from '../../../util';
+import { getTransactionsMeta } from './getTransactionsMeta';
 
 const actions = {
 	GET_TRANSACTIONS_REQUEST: 'GET_TRANSACTIONS_REQUEST',
@@ -65,6 +66,7 @@ export const getTransactions = () => dispatch => {
 		)
 		.then(response => {
 			dispatch(getTransactionsSuccess({ response }));
+			dispatch(getTransactionsMeta());
 		})
 		.catch(error => dispatch(getTransactionsError({ error })));
 };
