@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { theme } from './theme';
+import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 
 export const Container = styled.div`
   padding: 0 12px;
@@ -8,6 +10,8 @@ export const Container = styled.div`
   height: 100%;
   width: 100%;
   max-width: ${theme.container.maxWidth}px;
+  display: flex;
+  flex-direction: column;
 
   ${props =>
 		props.center &&
@@ -29,10 +33,7 @@ export const Container = styled.div`
 		`
     max-width: ${props.maxWidth}px !important;
   `}
-  
-  ${props =>
-		props.noPadding &&
-		`
-    padding: 0 !important;
-  `}
+
+	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

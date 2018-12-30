@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { helperMargin } from './helperMargin';
 import { theme } from './theme';
+import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 
 export const H1 = styled.h1`
 	font-size: 34px;
@@ -15,4 +16,5 @@ export const H1 = styled.h1`
 	`};
 
 	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

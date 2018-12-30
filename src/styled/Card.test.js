@@ -14,4 +14,10 @@ describe('Card', () => {
 		expect(tree).toMatchSnapshot();
 		expect(tree).toHaveStyleRule('background', 'none !important');
 	});
+
+	test('renders card with icon', () => {
+		const tree = renderer.create(<Card withIcon>Hello</Card>).toJSON();
+		expect(tree).toMatchSnapshot();
+		expect(tree).toHaveStyleRule('grid-template-columns', '52px auto');
+	});
 });

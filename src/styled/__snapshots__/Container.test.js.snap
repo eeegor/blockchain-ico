@@ -8,6 +8,13 @@ exports[`Container renders container 1`] = `
   height: 100%;
   width: 100%;
   max-width: 1030px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
@@ -25,6 +32,13 @@ exports[`Container renders container with centered content 1`] = `
   height: 100%;
   width: 100%;
   max-width: 1030px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -56,6 +70,13 @@ exports[`Container renders container with full width content 1`] = `
   height: 100%;
   width: 100%;
   max-width: 1030px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   max-width: 100% !important;
 }
 
@@ -74,6 +95,13 @@ exports[`Container renders container with max content width 1`] = `
   height: 100%;
   width: 100%;
   max-width: 1030px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   max-width: 480px !important;
 }
 
@@ -92,6 +120,13 @@ exports[`Container renders container with no padding 1`] = `
   height: 100%;
   width: 100%;
   max-width: 1030px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 0 !important;
 }
 

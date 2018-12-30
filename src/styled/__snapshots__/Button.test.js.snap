@@ -34,6 +34,41 @@ exports[`Button renders button 1`] = `
 />
 `;
 
+exports[`Button renders button with no shadow 1`] = `
+.c0 {
+  cursor: pointer;
+  border: 1px solid #ebf0ff;
+  outline: 0;
+  background: #fff;
+  color: #2B60FF;
+  padding: 0.75rem 3rem;
+  border-radius: 4px;
+  font-size: 13px;
+  -webkit-letter-spacing: 1.18px;
+  -moz-letter-spacing: 1.18px;
+  -ms-letter-spacing: 1.18px;
+  letter-spacing: 1.18px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: GTCinetype-Bold;
+  box-shadow: 0 14px 17px rgba(0,4,18,.16);
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  box-shadow: none !important;
+}
+
+.c0:hover {
+  color: #fff;
+  background: #003ef7;
+  border-color: #003ef7;
+}
+
+<button
+  className="c0"
+/>
+`;
+
 exports[`Button renders danger button 1`] = `
 .c0 {
   cursor: pointer;

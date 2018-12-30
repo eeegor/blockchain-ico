@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { theme } from './theme';
+import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 
 export const Card = styled.div`
 	padding: 12px;
@@ -28,4 +30,7 @@ export const Card = styled.div`
 		border: none !important;
 		box-shadow: none !important;
   `}
+  
+  	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 import { theme } from './theme';
 import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 
 export const A = styled.a`
 	font-size: 16px;
@@ -23,4 +24,5 @@ export const A = styled.a`
   `};
 
 	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

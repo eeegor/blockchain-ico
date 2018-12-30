@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 import { theme } from './theme';
+import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 
 export const Button = styled.button`
   cursor: pointer;
@@ -118,4 +120,7 @@ export const Button = styled.button`
       }
     }
 	`}
+  
+  ${props => helperMargin(props)}
+  ${props => helperPadding(props)}
 `;

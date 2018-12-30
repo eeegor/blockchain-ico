@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 import { theme } from './theme';
 
 export const Header = styled.div`
@@ -22,4 +24,7 @@ export const Header = styled.div`
 			height: 48px;
 		}
 	}
+
+	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

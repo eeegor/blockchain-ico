@@ -47,6 +47,12 @@ describe('Button', () => {
 		expect(tree).toHaveStyleRule('background', theme.colors.primaryRed);
 	});
 
+	it('renders button with no shadow', () => {
+		const tree = renderer.create(<Button noShadow />).toJSON();
+		expect(tree).toMatchSnapshot();
+		expect(tree).toHaveStyleRule('box-shadow', 'none !important');
+	});
+
 	it('renders token button', () => {
 		const tree = renderer.create(<Button token />).toJSON();
 		expect(tree).toMatchSnapshot();

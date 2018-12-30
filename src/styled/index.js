@@ -17,6 +17,7 @@ import { Content } from './Content';
 import { Card } from './Card';
 import { CardIcon } from './CardIcon';
 import { CardBody } from './CardBody';
+import { Bar } from './Bar';
 
 export {
 	H1,
@@ -37,5 +38,6 @@ export {
 	Content,
 	Card,
 	CardIcon,
-	CardBody
+	CardBody,
+	Bar
 };

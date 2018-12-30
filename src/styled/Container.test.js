@@ -38,7 +38,7 @@ describe('Container', () => {
 
 	test('renders container with no padding', () => {
 		const tree = renderer
-			.create(<Container noPadding>Wrapped Content</Container>)
+			.create(<Container padding="0">Wrapped Content</Container>)
 			.toJSON();
 		expect(tree).toMatchSnapshot();
 		expect(tree).toHaveStyleRule('padding', '0 !important');

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 import { theme } from './theme';
 
 export const H5 = styled.h5`
@@ -15,4 +16,5 @@ export const H5 = styled.h5`
 	`};
 
 	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

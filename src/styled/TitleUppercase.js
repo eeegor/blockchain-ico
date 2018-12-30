@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 import { theme } from './theme';
 
 export const TitleUppercase = styled.h2`
@@ -18,4 +19,5 @@ export const TitleUppercase = styled.h2`
   `};
 
 	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

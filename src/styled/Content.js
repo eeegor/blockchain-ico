@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { theme } from './theme';
+import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 
 export const Content = styled.div`
 	width: 100%;
@@ -29,4 +31,7 @@ export const Content = styled.div`
 		`}
 
 	`}
+  
+	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

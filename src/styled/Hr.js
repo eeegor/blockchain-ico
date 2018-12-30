@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 import { theme } from './theme';
 
 export const Hr = styled.hr`
@@ -8,4 +10,7 @@ export const Hr = styled.hr`
 	border: 0;
 	border-top: 1px solid #3332;
 	max-width: ${theme.container.maxWidth - 2 * 12}px;
+
+	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

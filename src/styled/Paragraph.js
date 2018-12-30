@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { helperMargin } from './helperMargin';
+import { helperPadding } from './helperPadding';
 import { theme } from './theme';
 
 export const Paragraph = styled.p`
@@ -15,4 +16,5 @@ export const Paragraph = styled.p`
   `};
 
 	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;
