@@ -38,6 +38,12 @@ export const Grid = styled.div`
 		1fr
 	);
 
+	${props =>
+		props.gap &&
+		`
+		grid-gap: ${props.gap}px ${props.gap}px;
+	`}
+
 	@media (min-width: ${theme.media.tablet}px) {
 		grid-gap: ${props => props.gap || theme.grid.gridGap}px
 			${props => props.gap || theme.grid.gridGap}px;

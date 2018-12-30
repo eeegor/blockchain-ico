@@ -49,6 +49,11 @@ describe('Grid', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
+	test('renders grid with custom gap', () => {
+		const tree = renderer.create(<Grid gap={6}>Content</Grid>).toJSON();
+		expect(tree).toMatchSnapshot();
+	});
+
 	test('renders grid with given number of responsive columns [mobile, tablet, desktop]', () => {
 		const tree = renderer
 			.create(<Grid top={[2, 3, 4]}>Content</Grid>)
