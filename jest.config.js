@@ -14,7 +14,8 @@ module.exports = {
 		'src/**/*.{js,jsx}',
 		'!**/*._story.*',
 		'!**/*.story.*',
-		'!src/index.*'
+		'!src/index.*',
+		'!src/store/index.*'
 	],
 	// uncomment the following to make tests fail if coverage goals are not met
 	// coverageThreshold: {
