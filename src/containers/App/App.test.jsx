@@ -24,7 +24,13 @@ describe('App', () => {
 		ReactDOM.unmountComponentAtNode(div);
 	});
 	it('renders App', () => {
-		const tree = renderer.create(<App />).toJSON();
+		const tree = renderer
+			.create(
+				<Provider store={store}>
+					<App />
+				</Provider>
+			)
+			.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });
