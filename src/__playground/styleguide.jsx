@@ -32,13 +32,9 @@ export const Styleguide = () => {
 	const { colors } = theme;
 	return (
 		<div className="styleguide">
-			<Header>
-				<Container center>
-					<Logo color={colors.primaryDarkBlue} />
-				</Container>
-			</Header>
-			<Content top={[60, 84]}>
+			<Content>
 				<Container>
+					<H1>Styleguide</H1>
 					<H2 marginBottom={24}>Typography</H2>
 					<H1>H1 Blockchain Ico</H1>
 					<H2>H2 Blockchain Ico</H2>
