@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Div renders default div 1`] = `
+.c0 {
+  width: 100%;
+}
+
+<div
+  className="c0"
+>
+  Title
+</div>
+`;
+
+exports[`Div renders div with custom background 1`] = `
+.c0 {
+  width: 100%;
+  background: green !important;
+}
+
+<div
+  className="c0"
+>
+  Title
+</div>
+`;
+
+exports[`Div renders div with custom color 1`] = `
+.c0 {
+  width: 100%;
+  color: green !important;
+}
+
+<div
+  className="c0"
+  color="green"
+>
+  Title
+</div>
+`;
+
+exports[`Div renders div with given min height 1`] = `
+.c0 {
+  width: 100%;
+  min-height: 100px !important;
+}
+
+<div
+  className="c0"
+>
+  Title
+</div>
+`;
+
+exports[`Div renders div with given z index 1`] = `
+.c0 {
+  width: 100%;
+  z-index: 100 !important;
+}
+
+<div
+  className="c0"
+>
+  Title
+</div>
+`;

@@ -60,6 +60,11 @@ export const fontFamilies = `
 export const GlobalStyle = createGlobalStyle`
   ${fontFamilies}
 
+  body:not(.user-is-tabbing) button:focus,
+  body:not(.user-is-tabbing) select:focus{
+    outline: none;
+  }
+
   *,
   *:before,
   *:after {

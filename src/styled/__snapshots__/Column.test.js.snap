@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Column renders column wrapper 1`] = `
+<div
+  className=""
+>
+  Info
+</div>
+`;
+
+exports[`Column renders column wrapper with max width 1`] = `
+.c0 {
+  max-width: 100px !important;
+}
+
+<div
+  className="c0"
+>
+  Info
+</div>
+`;

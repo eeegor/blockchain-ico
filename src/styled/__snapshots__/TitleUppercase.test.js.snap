@@ -33,7 +33,7 @@ exports[`TitleUppercase renders h1 with custom color 1`] = `
   -moz-letter-spacing: 1px;
   -ms-letter-spacing: 1px;
   letter-spacing: 1px;
-  color: green;
+  color: green !important;
 }
 
 <h2

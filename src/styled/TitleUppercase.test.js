@@ -17,6 +17,6 @@ describe('TitleUppercase', () => {
 			.create(<TitleUppercase color="green">Title</TitleUppercase>)
 			.toJSON();
 		expect(tree).toMatchSnapshot();
-		expect(tree).toHaveStyleRule('color', 'green');
+		expect(tree).toHaveStyleRule('color', 'green !important');
 	});
 });

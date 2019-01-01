@@ -15,7 +15,7 @@ export const TitleUppercase = styled.h2`
 	${props =>
 		props.color &&
 		`
-	  color: ${props.color};
+	  color: ${props.color} !important;
   `};
 
 	${props => helperMargin(props)}
