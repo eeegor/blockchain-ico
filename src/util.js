@@ -2,24 +2,39 @@ import moment from 'moment';
 
 /**
  *
- * Calculate sum
+ * Format crypto currency value to readable format
+ *
+ * @param {number} value
+ * @param {string} currency
+ * @param {object} prices
+ * @param {string} format
  */
-
-export const formatValue = (value, currency, format = null) => {
+export const formatValue = (value, currency, prices, format = null) => {
 	const btc = value / 100000000;
 	const ltc = value / 100000000;
 	const eth = value / 1000000000000000000;
+	if (!prices) {
+		return 0;
+	}
 	switch (currency) {
 		case 'BTC':
-			return format === 'USD' ? btc * 3883.81 : btc;
+			return format === 'USD' ? btc / prices.BTC : btc;
 		case 'LTC':
-			return format === 'USD' ? ltc * 32.1 : ltc;
+			return format === 'USD' ? ltc / prices.LTC : ltc;
 		case 'ETH':
-			return format === 'USD' ? eth * 140.74 : eth;
+			return format === 'USD' ? eth / prices.ETH : eth;
 		default:
 			return value;
 	}
 };
+
+/**
+ *
+ * Sort array by key
+ *
+ * @param {array} array
+ * @param {string} key
+ */
 
 export const sortByKey = (array, key) =>
 	array.sort((a, b) => {
@@ -34,6 +49,14 @@ export const sortByKey = (array, key) =>
 		return 0;
 	});
 
+/**
+ *
+ * Sort array by date
+ *
+ * @param {array} array
+ * @param {string} key
+ */
+
 export const sortByDate = (array, key) =>
 	array.sort((a, b) => {
 		const x = moment(a[key]).valueOf();
@@ -41,6 +64,12 @@ export const sortByDate = (array, key) =>
 		return x - y;
 	});
 
+/**
+ *
+ * Merge data
+ *
+ * @param {array} data
+ */
 export const mergeData = data => {
 	const merged = {};
 	Object.keys(data).forEach(stage =>
@@ -53,11 +82,19 @@ export const mergeData = data => {
 		})
 	);
 	return Object.keys(merged)
-		.map((key, index) => ({ ...merged[key], order: index + 1 }))
+		.map(key => ({ ...merged[key] }))
 		.sort((a, b) => a.txid > b.txid);
 };
 
-export const mergeMeta = (meta, localData) => {
+/**
+ *
+ * Merge data and meta
+ *
+ * @param {object} meta
+ * @param {array} localData
+ * @param {object} prices
+ */
+export const mergeMeta = (meta, localData, prices) => {
 	const merged = {};
 	// eslint-disable-next-line no-unused-expressions
 	localData &&
@@ -68,7 +105,7 @@ export const mergeMeta = (meta, localData) => {
 			}
 			merged[txid] = {
 				...transaction,
-				...(meta[txid] || {}),
+				...meta[txid],
 				confirmed: new Date(meta[txid].confirmed),
 				received: new Date(meta[txid].received)
 			};
@@ -78,16 +115,17 @@ export const mergeMeta = (meta, localData) => {
 	return sortByDate(
 		Object.keys(merged).map(txid => merged[txid]),
 		'received'
-	).map(sorted => {
+	).map((sorted, index) => {
 		const usd = parseFloat(
-			formatValue(sorted.value, sorted.currency, 'USD')
+			formatValue(sorted.value, sorted.currency, prices, 'USD')
 		);
 		sum += usd;
 		return {
 			...sorted,
 			normalizedValue: parseFloat(
-				formatValue(sorted.value, sorted.currency).toFixed(4)
+				formatValue(sorted.value, sorted.currency, prices).toFixed(4)
 			),
+			order: index + 1,
 			usd,
 			sum
 		};
@@ -96,9 +134,10 @@ export const mergeMeta = (meta, localData) => {
 
 /**
  *
- * Cases word with a capital letter
+ * Uppercase first letter in a word
+ *
+ * @param {string} word
  */
-
 export const uppercaseFirst = word =>
 	`${word.charAt(0).toUpperCase()}${word.substring(1)}`;
 
@@ -106,7 +145,6 @@ export const uppercaseFirst = word =>
  *
  * Generate unique id
  */
-
 export function guid() {
 	function s4() {
 		return Math.floor((1 + Math.random()) * 0x10000)

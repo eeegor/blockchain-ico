@@ -108,4 +108,28 @@ describe('transaction reducer', () => {
 			]
 		});
 	});
+
+	it('handles get transactions current prices success', () => {
+		const nextState = transactionReducer(undefined, {
+			type: actions.GET_TRANSACTIONS_CURRENT_PRICE_SUCCESS,
+			payload: {
+				data: {
+					ETH: 1,
+					BTC: 2,
+					LTC: 3,
+					USD: 4,
+					EUR: 5
+				}
+			}
+		});
+		expect(nextState).toEqual({
+			prices: {
+				ETH: 1,
+				BTC: 2,
+				LTC: 3,
+				USD: 4,
+				EUR: 5
+			}
+		});
+	});
 });

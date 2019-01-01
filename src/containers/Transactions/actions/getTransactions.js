@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { mergeData } from '../../../util';
 import { getTransactionsMeta } from './getTransactionsMeta';
+import { getTransactionsCurrentPrice } from './getTransactionsCurrentPrice';
 
 const actions = {
 	GET_TRANSACTIONS_REQUEST: 'GET_TRANSACTIONS_REQUEST',
@@ -10,7 +11,7 @@ const actions = {
 
 export const getTransactionsActions = actions;
 
-const isLocal = true;
+const isLocal = false;
 
 /**
  *
@@ -57,6 +58,7 @@ export const getTransactionsError = ({ error }) => ({
  */
 export const getTransactions = () => dispatch => {
 	dispatch(getTransactionsRequest());
+	dispatch(getTransactionsCurrentPrice());
 	axios
 		.get(
 			/* istanbul ignore next */

@@ -1,64 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Transactions renders Transactions 1`] = `
-.c2 {
-  font-size: 24px;
-  line-height: 33px;
-  font-family: Rubik-Regular;
-  margin-bottom: 12px;
-  margin-top: 48px !important;
-}
-
-.c12 {
-  width: 100%;
-  margin: 26px auto 28px auto;
-  outline: 0;
-  border: 0;
-  border-top: 1px solid #3332;
-  max-width: 1006px;
-}
-
-.c8 {
-  font-size: 16px;
-  line-height: 26px;
-  font-family: GTCinetype-Regular;
-  margin-bottom: 12px;
-  margin-bottom: 0 !important;
-  margin-right: 12px !important;
-}
-
-.c1 {
-  padding: 0 12px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-  width: 100%;
-  max-width: 1030px;
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c3 {
-  display: grid;
-  grid-gap: 15px 15px;
-  grid-template-columns: repeat( 4,1fr );
-  grid-gap: 6px 6px;
-  margin-top: 24px !important;
-  margin-bottom: 24px !important;
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c13 {
-  display: grid;
-  grid-gap: 15px 15px;
-  grid-template-columns: repeat( 1,1fr );
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.c4 {
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c5 {
   cursor: pointer;
   border: 1px solid #ebf0ff;
   outline: 0;
@@ -86,13 +112,13 @@ exports[`Transactions renders Transactions 1`] = `
   padding-right: 0 !important;
 }
 
-.c4:hover {
+.c5:hover {
   color: #fff;
   background: #003ef7;
   border-color: #003ef7;
 }
 
-.c5 {
+.c6 {
   cursor: pointer;
   border: 1px solid #ebf0ff;
   outline: 0;
@@ -117,13 +143,13 @@ exports[`Transactions renders Transactions 1`] = `
   padding-right: 0 !important;
 }
 
-.c5:hover {
+.c6:hover {
   color: #fff;
   background: #003ef7;
   border-color: #003ef7;
 }
 
-.c10 {
+.c15 {
   cursor: pointer;
   border: 1px solid #ebf0ff;
   outline: 0;
@@ -150,13 +176,13 @@ exports[`Transactions renders Transactions 1`] = `
   padding-right: 12px !important;
 }
 
-.c10:hover {
+.c15:hover {
   color: #fff;
   background: #003ef7;
   border-color: #003ef7;
 }
 
-.c11 {
+.c16 {
   cursor: pointer;
   border: 1px solid #ebf0ff;
   outline: 0;
@@ -181,92 +207,182 @@ exports[`Transactions renders Transactions 1`] = `
   padding-right: 12px !important;
 }
 
-.c11:hover {
+.c16:hover {
   color: #fff;
   background: #003ef7;
   border-color: #003ef7;
 }
 
-.c6 {
+.c1 {
+  padding: 0 12px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  max-width: 1030px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 24px !important;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c17 {
+  width: 100%;
+  background: #1A2440 !important;
   padding-top: 24px !important;
   padding-bottom: 24px !important;
 }
 
-.c9 {
+.c2 {
+  font-size: 34px;
+  line-height: 51px;
+  font-family: Rubik-Regular;
+  margin-bottom: 12px;
+  margin-top: 24px !important;
+}
+
+.c4 {
+  display: grid;
+  grid-gap: 15px 15px;
+  grid-template-columns: repeat( 4,1fr );
+  grid-gap: 6px 6px;
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+}
+
+.c18 {
+  display: grid;
+  grid-gap: 15px 15px;
+  grid-template-columns: repeat( 1,1fr );
+}
+
+.c13 {
+  position: relative;
+}
+
+.c13::after {
+  position: absolute;
+  content: '';
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%);
+  border: 6px solid transparent;
+  border-color: #ebf0ff transparent transparent transparent;
+}
+
+.c13 select {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 12px 36px 12px 12px;
+  border: 1px solid #ebf0ff;
+  background: #fff;
+  position: relative;
+  color: #2B60FF;
+  font-family: GTCinetype-Bold;
+}
+
+.c13 select::-ms-expand {
+  display: none;
+}
+
+.c3 {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: GTCinetype-Regular;
+  margin-bottom: 12px;
+  margin-right: 48px !important;
+}
+
+.c9 {
+  font-size: 15px;
+  line-height: 22px;
+  font-family: GTCinetype-Light;
+  margin-bottom: 12px;
+  margin-bottom: 0 !important;
+  margin-right: 12px !important;
+}
+
+.c12 {
+  font-size: 15px;
+  line-height: 22px;
+  font-family: GTCinetype-Light;
+  margin-bottom: 12px;
+  margin-bottom: 0 !important;
+  margin-right: 6px !important;
 }
 
 .c0 {
   margin-top: 84px;
 }
 
+@media (max-width:766px) {
+  .c8 {
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:766px) {
+  .c10 {
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+}
+
 @media (min-width:767px) {
-  .c3 {
+  .c4 {
     grid-gap: 6px 6px;
     grid-template-columns: repeat( 7,1fr );
   }
 }
 
 @media (min-width:1024px) {
-  .c3 {
+  .c4 {
     grid-template-columns: repeat( 8,1fr );
   }
 }
 
 @media (min-width:767px) {
-  .c13 {
+  .c18 {
     grid-gap: 30px 30px;
-    grid-template-columns: repeat( 3,1fr );
+    grid-template-columns: repeat( 2,1fr );
   }
 }
 
 @media (min-width:1024px) {
-  .c13 {
+  .c18 {
     grid-template-columns: repeat( 3,1fr );
   }
 }
@@ -277,118 +393,142 @@ exports[`Transactions renders Transactions 1`] = `
   <div
     className="c1"
   >
-    <h2
+    <h1
       className="c2"
     >
-      Transactions by stage
-    </h2>
-    <div
+      Ico summary
+    </h1>
+    <p
       className="c3"
     >
+      Follow the transactions through different stages of our ICO
+    </p>
+    <div
+      className="c4"
+    >
       <button
-        className="c4"
+        className="c5"
         onClick={[Function]}
         selected={true}
       >
         All
       </button>
       <button
-        className="c5"
+        className="c6"
         onClick={[Function]}
         selected={false}
       >
         Pre Ico
       </button>
       <button
-        className="c5"
+        className="c6"
         onClick={[Function]}
         selected={false}
       >
         Ico
       </button>
       <button
-        className="c5"
+        className="c6"
         onClick={[Function]}
         selected={false}
       >
         Final Ico
       </button>
     </div>
+  </div>
+  <div
+    className="c1"
+  >
     <div
-      className="c6"
+      className="c7"
     >
       <div
-        className="c7"
+        className="c8"
       >
         <p
-          className="c8"
+          className="c9"
         >
           0
            Transactions
         </p>
         <p
-          className="c8"
+          className="c9"
         >
           Page 
-          2
+          1
            / 
           0
         </p>
       </div>
       <div
-        className="c9"
+        className="c10"
       >
-        <select
-          className="per-page"
-          onChange={[Function]}
-          value={30}
+        <div
+          className="c11"
         >
-          <option
-            value=""
+          <p
+            className="c12"
           >
             Per page
-          </option>
-          <option
-            value="9"
+          </p>
+          <div
+            className="per-page c13"
+            onChange={[Function]}
+            value={9}
           >
-            9
-          </option>
-          <option
-            value="30"
-          >
-            30
-          </option>
-          <option
-            value="60"
-          >
-            60
-          </option>
-          <option
-            value="99"
-          >
-            99
-          </option>
-        </select>
-        <button
-          className="prev-page c10"
-          onClick={[Function]}
+            <select>
+              <option
+                value="9"
+              >
+                9
+              </option>
+              <option
+                value="30"
+              >
+                30
+              </option>
+              <option
+                value="60"
+              >
+                60
+              </option>
+              <option
+                value="99"
+              >
+                99
+              </option>
+            </select>
+          </div>
+        </div>
+        <div
+          className="c14"
         >
-          Prev
-        </button>
-        <button
-          className="next-page c11"
-          onClick={[Function]}
-        >
-          Next
-        </button>
+          <button
+            className="prev-page c15"
+            onClick={[Function]}
+          >
+            Prev
+          </button>
+          <button
+            className="next-page c16"
+            onClick={[Function]}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
-    <hr
-      className="c12"
-    />
+  </div>
+  <div
+    className="c17"
+  >
     <div
-      className="transactions-list c13"
-    />
+      className="c1"
+    >
+      <div
+        className="transactions-list c18"
+      />
+    </div>
   </div>
 </div>
 `;

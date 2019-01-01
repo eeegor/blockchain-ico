@@ -30,7 +30,7 @@ export const getTransactionsMetaSuccess = ({ response, state }) => {
 	return {
 		type: actions.GET_TRANSACTIONS_META_SUCCESS,
 		payload: {
-			data: mergeMeta(data, state)
+			data: mergeMeta(data, state.data, state.prices)
 		}
 	};
 };
@@ -60,7 +60,7 @@ export const getTransactionsMeta = () => (dispatch, getState) => {
 			dispatch(
 				getTransactionsMetaSuccess({
 					response,
-					state: getState().transactions.data
+					state: getState().transactions
 				})
 			);
 		})

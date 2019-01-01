@@ -1,17 +1,14 @@
-import {
-	getTransactionsMetaActions,
-	getTransactionsMetaSuccess
-} from './getTransactionsMeta';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import { getTransactionsMeta } from './getTransactionsMeta';
+
+export const mockStore = configureMockStore([thunk]);
 
 describe('getTransactionsMeta actions', () => {
-	it('handles type correctly', () => {
-		const response = { data: [] };
-		const action = getTransactionsMetaSuccess({ response });
-		expect(action).toEqual({
-			type: getTransactionsMetaActions.GET_TRANSACTIONS_META_SUCCESS,
-			payload: {
-				data: []
-			}
-		});
+	it('handles type correctly', async () => {
+		const store = mockStore();
+		await store.dispatch(getTransactionsMeta());
+		const actions = store.getActions();
+		expect(actions[0]).toEqual({ type: 'GET_TRANSACTIONS_META_REQUEST' });
 	});
 });

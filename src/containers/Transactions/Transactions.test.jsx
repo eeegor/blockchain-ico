@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { Transactions } from './Transactions';
 import { mount } from 'enzyme';
-import { Card } from '../../styled';
+import { CardTransaction } from '../../styled';
 
 afterEach(() => {
 	jest.clearAllMocks();
@@ -123,7 +123,7 @@ describe('Transactions', () => {
 			<Transactions {...props} transactions={transactions} stage="ico" />
 		);
 		wrapper.setState(state);
-		const cards = wrapper.find('.transactions-list').find(Card);
+		const cards = wrapper.find('.transactions-list').find(CardTransaction);
 		expect(cards.length).toEqual(2);
 	});
 });

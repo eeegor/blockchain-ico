@@ -15,6 +15,14 @@ import {
 } from './getTransactionsMeta';
 
 import {
+	getTransactionsCurrentPriceActions,
+	getTransactionsCurrentPrice,
+	getTransactionsCurrentPriceRequest,
+	getTransactionsCurrentPriceSuccess,
+	getTransactionsCurrentPriceError
+} from './getTransactionsCurrentPrice';
+
+import {
 	setTransactionStageActions,
 	setTransactionStage
 } from './setTransactionStage';
@@ -22,6 +30,7 @@ import {
 export const actions = {
 	...getTransactionsActions,
 	...getTransactionsMetaActions,
+	...getTransactionsCurrentPriceActions,
 	...setTransactionStageActions
 };
 
@@ -30,9 +39,13 @@ export {
 	getTransactionsRequest,
 	getTransactionsSuccess,
 	getTransactionsError,
-	setTransactionStage,
 	getTransactionsMeta,
 	getTransactionsMetaRequest,
 	getTransactionsMetaSuccess,
-	getTransactionsMetaError
+	getTransactionsMetaError,
+	getTransactionsCurrentPrice,
+	getTransactionsCurrentPriceRequest,
+	getTransactionsCurrentPriceSuccess,
+	getTransactionsCurrentPriceError,
+	setTransactionStage
 };
