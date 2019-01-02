@@ -181,7 +181,9 @@ export class Transactions extends Component {
 					background={theme.colors.darkBg}
 					minHeight={isMobile ? 400 : 600}
 				>
-					<IcoChart data={transactions} stage={stage || 'all'} />
+					{transactions && transactions.length > 0 && (
+						<IcoChart data={transactions} stage={stage || 'all'} />
+					)}
 				</Div>
 				<IcoList
 					filteredTransactions={filteredTransactions}
