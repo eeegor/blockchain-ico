@@ -7,8 +7,10 @@ import {
 	sortByKey,
 	sortByDate,
 	mergeData,
-	mergeMeta
+	mergeMeta,
+	currencyColor
 } from './util';
+import { theme } from './styled/theme';
 
 const prices = {
 	BTC: 0.0002678,
@@ -29,6 +31,17 @@ describe('util', () => {
 		expect(id3 === id1).not.toBe(true);
 	});
 
+	it('gives currency a color', () => {
+		const etherium = currencyColor('ETH');
+		const bitcoin = currencyColor('BTC');
+		const litecoin = currencyColor('LTC');
+		const unknown = currencyColor('RAMBO');
+		expect(etherium).toEqual(theme.colors.etherium);
+		expect(bitcoin).toEqual(theme.colors.bitcoin);
+		expect(litecoin).toEqual(theme.colors.litecoin);
+		expect(unknown).toEqual('#fff');
+	});
+
 	it('formats ETH, BTC and LTC currency value', () => {
 		const resultETH = formatValue(357898246000000000, 'ETH', prices);
 		const resultBTC = formatValue(9991200, 'BTC', prices);
@@ -45,7 +58,7 @@ describe('util', () => {
 
 	it('handles default value with no prices', () => {
 		const result = formatValue(1345, '');
-		expect(result).toEqual(0);
+		expect(result).toEqual(undefined);
 	});
 
 	it('formats ETH, BTC and LTC value to dollar', () => {

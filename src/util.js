@@ -1,4 +1,25 @@
 import moment from 'moment';
+import { theme } from './styled/theme';
+
+/**
+ *
+ * Adds color to crypto currency value
+ *
+ * @param {string} currency
+ */
+
+export const currencyColor = currency => {
+	switch (currency) {
+		case 'ETH':
+			return theme.colors.etherium;
+		case 'BTC':
+			return theme.colors.bitcoin;
+		case 'LTC':
+			return theme.colors.litecoin;
+		default:
+			return '#fff';
+	}
+};
 
 /**
  *
@@ -14,7 +35,7 @@ export const formatValue = (value, currency, prices, format = null) => {
 	const ltc = value / 100000000;
 	const eth = value / 1000000000000000000;
 	if (!prices) {
-		return 0;
+		return undefined;
 	}
 	switch (currency) {
 		case 'BTC':
@@ -112,24 +133,29 @@ export const mergeMeta = (meta, localData, prices) => {
 		});
 
 	let sum = 0;
-	return sortByDate(
-		Object.keys(merged).map(txid => merged[txid]),
-		'received'
-	).map((sorted, index) => {
-		const usd = parseFloat(
-			formatValue(sorted.value, sorted.currency, prices, 'USD')
-		);
-		sum += usd;
-		return {
-			...sorted,
-			normalizedValue: parseFloat(
-				formatValue(sorted.value, sorted.currency, prices).toFixed(4)
-			),
-			order: index + 1,
-			usd,
-			sum
-		};
-	});
+	return (
+		prices &&
+		sortByDate(
+			Object.keys(merged).map(txid => merged[txid]),
+			'received'
+		).map((sorted, index) => {
+			const usd = parseFloat(
+				formatValue(sorted.value, sorted.currency, prices, 'USD')
+			);
+			sum += usd;
+			return {
+				...sorted,
+				normalizedValue: parseFloat(
+					formatValue(sorted.value, sorted.currency, prices).toFixed(
+						4
+					)
+				),
+				order: index + 1,
+				usd,
+				sum
+			};
+		})
+	);
 };
 
 /**
