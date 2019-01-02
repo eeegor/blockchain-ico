@@ -50,8 +50,9 @@ export class Transactions extends Component {
 
 	componentDidMount() {
 		window.addEventListener('resize', this.handleResize);
-		const { getTransactions } = this.props;
+		const { getTransactions, setTransactionStage } = this.props;
 		getTransactions && getTransactions();
+		setTransactionStage && setTransactionStage('all');
 	}
 
 	componentWillUnmount() {
@@ -59,7 +60,12 @@ export class Transactions extends Component {
 	}
 
 	componentDidUpdate(newProps) {
-		if (this.props.prices !== newProps.prices && newProps.prices !== {}) {
+		if (
+			this.props.transactions !== newProps.transactions &&
+			newProps.prices !== {} &&
+			newProps.transactions &&
+			newProps.transactions !== []
+		) {
 			setTimeout(() => {
 				this.setState(state => ({ ...state, loading: false }));
 			}, 1000);
@@ -193,7 +199,6 @@ export class Transactions extends Component {
 }
 
 const mapStateToProps = state => {
-	console.log('mapStateToProps', state);
 	return {
 		app: state.app,
 		transactions: state.transactions.data,
