@@ -10,14 +10,14 @@ import {
 } from '../../styled';
 import { theme } from '../../styled/theme';
 import { XYFrame } from 'semiotic';
-import { windowMaxWidth, windowMaxHeight } from '../../util';
+import { windowMaxWidth } from '../../util';
 
 const selected = {
 	all: {
 		dateMin: '2017-07-15T10:00:00Z',
 		dateMax: '2018-06-10T10:10:00Z',
 		totalMin: 0,
-		totalMax: 1700000,
+		totalMax: 2000000,
 		scale: 1500
 	},
 	preIco: {
@@ -28,17 +28,17 @@ const selected = {
 		scale: 750
 	},
 	ico: {
-		dateMin: '2017-10-31T10:00:00Z',
-		dateMax: '2017-11-21T10:45:00Z',
+		dateMin: '2017-10-31T06:00:00Z',
+		dateMax: '2017-11-21T18:45:00Z',
 		totalMin: 780000,
-		totalMax: 1130000,
+		totalMax: 1250000,
 		scale: 500
 	},
 	finalIco: {
 		dateMin: '2018-05-09T02:00:00Z',
 		dateMax: '2018-05-17T10:00:00Z',
 		totalMin: 1110000,
-		totalMax: 1600000,
+		totalMax: 1800000,
 		scale: 750
 	}
 };

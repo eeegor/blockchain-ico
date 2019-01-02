@@ -40,7 +40,7 @@ describe('Transactions', () => {
 				.first()
 				.simulate('click');
 			expect(getTransactions).toHaveBeenCalledTimes(1);
-		}, 1200);
+		}, 200);
 	});
 
 	it('shows prev transactions page', () => {
@@ -52,7 +52,7 @@ describe('Transactions', () => {
 				.simulate('click');
 			expect(getTransactions).toHaveBeenCalledTimes(1);
 			expect(wrapper.state().page).toEqual(1);
-		}, 1200);
+		}, 200);
 	});
 
 	it('shows next transactions page', () => {
@@ -77,7 +77,7 @@ describe('Transactions', () => {
 			expect(getTransactions).toHaveBeenCalledTimes(1);
 			expect(wrapper.state().page).toEqual(2);
 			expect(wrapper.state().perPage).toEqual(2);
-		}, 1200);
+		}, 200);
 	});
 
 	it('handles items per page', () => {
@@ -100,7 +100,7 @@ describe('Transactions', () => {
 				.first()
 				.simulate('change', { target: { value: 99 } });
 			expect(wrapper.state().perPage).toEqual(99);
-		}, 1200);
+		}, 200);
 	});
 
 	it('filters transactions by stage', () => {
@@ -143,6 +143,6 @@ describe('Transactions', () => {
 				.find('.transactions-list')
 				.find(CardTransaction);
 			expect(cards.length).toEqual(2);
-		}, 1200);
+		}, 200);
 	});
 });

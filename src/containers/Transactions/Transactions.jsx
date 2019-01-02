@@ -62,13 +62,12 @@ export class Transactions extends Component {
 	componentDidUpdate(newProps) {
 		if (
 			this.props.transactions !== newProps.transactions &&
+			newProps.prices &&
 			newProps.prices !== {} &&
 			newProps.transactions &&
 			newProps.transactions !== []
 		) {
-			setTimeout(() => {
-				this.setState(state => ({ ...state, loading: false }));
-			}, 1000);
+			this.setState(state => ({ ...state, loading: false }));
 		}
 	}
 
