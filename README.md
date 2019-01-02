@@ -62,17 +62,17 @@ The redux store is organized in feature based modules, each module brings it's o
 
 This app uses multiple api endpoints to receive data
 - Transactions
-  - https://blockchain.brickblock.io/inputs or http://localhost:5000/db
+  - https://blockchain.brickblock.io/inputs
 - Transactions meta
-  - https://bb-data.now.sh
+  - https://bb-data.now.sh | [repository](https://github.com/eeegor/blockchain-data)
 - Crypto currency exchange rates
   - https://min-api.cryptocompare.com
 
-```bash
-# serve main data from local server (localhost:5000)
-# you will need to set `isLocal` to true inside `src/Transactions/getTransactions.jsx`
-yarn server 
-```
+> ```bash
+> # You can serve transaction data from the local server (localhost:5000)
+> # You'll need to set `isLocal` to true inside `src/Transactions/getTransactions.jsx`
+> yarn server 
+> ```
 
 ## :rainbow: Prettier
 
