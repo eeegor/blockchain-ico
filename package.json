@@ -10,7 +10,7 @@
     "deploy": "yarn build && now",
     "format": "prettier --write \"{src,test}/**/*.{js,jsx,json}\" \"*.config.{js,json}\" \".babelrc\" \".prettierrc\" \".eslintrc\"",
     "lint": "eslint src && prettier --list-different \"{src,test}/**/*.{js,jsx}\"",
-    "prebuild": "rm -rf dist && yarn format",
+    "prebuild": "rm -rf dist && yarn format && yarn lint",
     "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --mode development\" --host localhost --port 8080",
     "server": "json-server ./mock/inputs.json --port 5000",
     "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && jest"
@@ -50,7 +50,6 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "fetch-mock": "^7.2.7",
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
