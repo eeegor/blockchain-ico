@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { mergeMeta } from '../../../util';
 
+const META_URL = 'https://bb-data.now.sh/index';
+
 const actions = {
 	GET_TRANSACTIONS_META_REQUEST: 'GET_TRANSACTIONS_META_REQUEST',
 	GET_TRANSACTIONS_META_SUCCESS: 'GET_TRANSACTIONS_META_SUCCESS',
@@ -55,7 +57,7 @@ export const getTransactionsMetaError = ({ error }) => ({
 export const getTransactionsMeta = () => (dispatch, getState) => {
 	dispatch(getTransactionsMetaRequest());
 	axios
-		.get('https://bb-data.now.sh/index')
+		.get(META_URL)
 		.then(response => {
 			dispatch(
 				getTransactionsMetaSuccess({

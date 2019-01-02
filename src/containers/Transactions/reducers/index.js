@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { actions } from '../actions';
 
 /**
@@ -7,7 +8,7 @@ import { actions } from '../actions';
  * @returns {object}
  */
 
-export const transactionReducer = (state = {}, action) => {
+export const transactionReducer = (state = { errors: [] }, action) => {
 	const { payload } = action;
 
 	switch (action.type) {
@@ -21,14 +22,28 @@ export const transactionReducer = (state = {}, action) => {
 		case actions.GET_TRANSACTIONS_CURRENT_PRICE_SUCCESS:
 			return {
 				...state,
-				prices: payload.data
+				prices: {
+					...payload.data,
+					fetched: moment().format('DD.MM.YY HH:mm:ss')
+				}
 			};
 
 		case actions.GET_TRANSACTIONS_ERROR:
+			return {
+				...state,
+				errors: [...state.errors, 'Could not fetch transactions']
+			};
+
 		case actions.GET_TRANSACTIONS_META_ERROR:
+			return {
+				...state,
+				errors: [...state.errors, 'Could not fetch transactions meta']
+			};
+
 		case actions.GET_TRANSACTIONS_CURRENT_PRICE_ERROR:
 			return {
-				...state
+				...state,
+				errors: [...state.errors, 'Could not fetch current price']
 			};
 
 		case actions.SET_TRANSACTIONS_STAGE:

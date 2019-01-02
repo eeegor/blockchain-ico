@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+const CURRENCY_URL =
+	'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=USD,EUR,ETH,LTC,BTC';
+
 const actions = {
 	GET_TRANSACTIONS_CURRENT_PRICE_REQUEST:
 		'GET_TRANSACTIONS_CURRENT_PRICE_REQUEST',
@@ -54,9 +57,7 @@ export const getTransactionsCurrentPriceError = ({ error }) => ({
 export const getTransactionsCurrentPrice = () => dispatch => {
 	dispatch(getTransactionsCurrentPriceRequest());
 	axios
-		.get(
-			'https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=USD,EUR,ETH,LTC,BTC'
-		)
+		.get(CURRENCY_URL)
 		.then(response => {
 			dispatch(getTransactionsCurrentPriceSuccess({ response }));
 		})

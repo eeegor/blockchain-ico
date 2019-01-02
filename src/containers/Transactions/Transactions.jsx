@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import moment from 'moment';
 import { connect } from 'react-redux';
-import { IconBitcoin, IconEtherium, IconLitecoin } from '../../components';
 import {
-	Bar,
-	BarInfo,
-	BarControls,
 	Button,
-	CardIcon,
 	Container,
 	Div,
 	Grid,
 	H1,
+	Loading,
 	Text,
 	TextSmall,
-	TitleUppercase,
-	CardTransaction,
-	CardBody,
-	Select
+	Error
 } from '../../styled';
 import { getTransactions, setTransactionStage } from './actions';
-import { formatValue } from '../../util';
+import { windowMaxWidth, windowMaxHeight } from '../../util';
 import { theme } from '../../styled/theme';
+import { IcoChart } from './IcoChart';
+import { IcoList } from './IcoList';
 
 export const TransactionsContainer = styled.div`
 	margin-top: 84px;
@@ -50,12 +44,26 @@ const buttonData = [
 export class Transactions extends Component {
 	state = {
 		page: 1,
-		perPage: 9
+		perPage: 9,
+		loading: true
 	};
 
 	componentDidMount() {
+		window.addEventListener('resize', this.handleResize);
 		const { getTransactions } = this.props;
 		getTransactions && getTransactions();
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.handleResize);
+	}
+
+	componentDidUpdate(newProps) {
+		if (this.props.prices !== newProps.prices && newProps.prices !== {}) {
+			setTimeout(() => {
+				this.setState(state => ({ ...state, loading: false }));
+			}, 1000);
+		}
 	}
 
 	selectStage = (event, stage = 'all') => {
@@ -66,6 +74,16 @@ export class Transactions extends Component {
 	};
 
 	gotoPage = page => this.setState(state => ({ ...state, page }));
+
+	handleResize = () => {
+		return this.setState(state => ({
+			...state,
+			windowSize: {
+				width: windowMaxWidth(),
+				height: windowMaxHeight()
+			}
+		}));
+	};
 
 	handlePerPage = (nextPerPage, totalItems) =>
 		this.setState(state => {
@@ -90,8 +108,15 @@ export class Transactions extends Component {
 		}));
 
 	render() {
-		const { page, perPage } = this.state;
-		const { transactions, stage, prices } = this.props;
+		const { loading, page, perPage } = this.state;
+		const { transactions, stage, prices, errors } = this.props;
+
+		if (errors && errors.length > 0) {
+			return errors.map((error, index) => (
+				<Error key={index}>{error}</Error>
+			));
+		}
+
 		const filterTransactions = (transactions, stage) => {
 			if (!transactions) {
 				return [];
@@ -105,15 +130,22 @@ export class Transactions extends Component {
 		const totalPages =
 			filteredTransactions &&
 			Math.ceil(filteredTransactions.length / perPage);
+		const isMobile = windowMaxWidth() < theme.media.tablet;
+
+		if (loading || !transactions[0]) {
+			return <Loading>Loading...</Loading>;
+		}
 
 		return (
 			<TransactionsContainer>
 				<Container>
-					<H1 marginTop="24">Ico summary</H1>
-					<Text marginRight={48}>
-						Follow the transactions through different stages of our
-						ICO
-					</Text>
+					<H1 marginTop="24">ICO summary</H1>
+					<Text marginRight={60}>Different stages of our ICO</Text>
+					<TextSmall marginRight={60}>
+						* prices are calculated using{' '}
+						<a href="http://cryptocompare.com">cryptocompare</a> on{' '}
+						{prices.fetched}
+					</TextSmall>
 					<Grid gap="6" columns={[4, 7, 8]} marginY="24">
 						{buttonData.map((button, index) => (
 							<Button
@@ -130,162 +162,24 @@ export class Transactions extends Component {
 						))}
 					</Grid>
 				</Container>
-				<Container>
-					<Bar centerY justifyBetween>
-						<BarInfo paddingY="24" centerY>
-							<TextSmall marginBottom="0" marginRight="12">
-								{filteredTransactions.length} Transactions
-							</TextSmall>
-							<TextSmall marginBottom="0" marginRight="12">
-								Page {page} / {totalPages}
-							</TextSmall>
-						</BarInfo>
-						<BarControls>
-							<Bar centerY>
-								<TextSmall marginBottom="0" marginRight="6">
-									Per page
-								</TextSmall>
-								<Select
-									className="per-page"
-									value={perPage}
-									onChange={e =>
-										this.handlePerPage(
-											e.target.value,
-											filteredTransactions.length
-										)
-									}
-								>
-									<select>
-										<option value="9">9</option>
-										<option value="30">30</option>
-										<option value="60">60</option>
-										<option value="99">99</option>
-									</select>
-								</Select>
-							</Bar>
-							<Bar>
-								<Button
-									className="prev-page"
-									noShadow
-									marginX="12"
-									paddingX="12"
-									onClick={() => this.handlePrevPage()}
-								>
-									Prev
-								</Button>
-								<Button
-									paddingX="12"
-									className="next-page"
-									noShadow
-									onClick={() =>
-										this.handleNextPage(totalPages)
-									}
-								>
-									Next
-								</Button>
-							</Bar>
-						</BarControls>
-					</Bar>
-				</Container>
-				<Div background={theme.colors.darkBg} paddingY="24">
-					<Container>
-						<Grid className="transactions-list" columns={[1, 2, 3]}>
-							{filteredTransactions
-								.slice(perPage * (page - 1), perPage * page)
-								.map(item => (
-									<CardTransaction
-										key={item.txid}
-										withIcon
-										noBg
-										padding="0"
-									>
-										<CardIcon>
-											{item.currency === 'BTC' && (
-												<IconBitcoin />
-											)}
-											{item.currency === 'LTC' && (
-												<IconLitecoin />
-											)}
-											{item.currency === 'ETH' && (
-												<IconEtherium />
-											)}
-										</CardIcon>
-										<CardBody>
-											<Bar
-												centerY
-												className="transaction__head"
-											>
-												<Text
-													className="transaction__stage"
-													marginBottom="0"
-												>
-													{item.stage}
-												</Text>
-												<Bar className="transaction__currency-usd">
-													<TitleUppercase
-														color={
-															(item.currency ===
-																'ETH' &&
-																theme.colors
-																	.etherium) ||
-															(item.currency ===
-																'BTC' &&
-																theme.colors
-																	.bitcoin) ||
-															(item.currency ===
-																'LTC' &&
-																theme.colors
-																	.litecoin)
-														}
-														className="transaction__currency"
-														marginBottom="0"
-														marginRight="12"
-													>
-														{item.currency}:
-													</TitleUppercase>
-													<TitleUppercase
-														className="transaction__usd"
-														color={
-															theme.colors
-																.primaryGreen
-														}
-													>
-														$
-														{formatValue(
-															item.value,
-															item.currency,
-															prices,
-															'USD'
-														).toFixed(2)}
-													</TitleUppercase>
-												</Bar>
-											</Bar>
-											<TextSmall
-												className="transaction__received"
-												marginBottom="0"
-												marginRight="12"
-											>
-												Received:{' '}
-												{moment(item.received).format(
-													'DD.MM.YY, HH:mm:ss'
-												)}
-											</TextSmall>
-											<TextSmall
-												className="transaction__confirmed"
-												marginBottom="0"
-												marginRight="12"
-											>
-												Confirmed:{' '}
-												{moment(item.confirmed).format(
-													'DD.MM.YY, HH:mm:ss'
-												)}
-											</TextSmall>
-										</CardBody>
-									</CardTransaction>
-								))}
-						</Grid>
-					</Container>
+				<Div
+					zIndex="7001"
+					color="#fff"
+					background={theme.colors.darkBg}
+					minHeight={isMobile ? 400 : 600}
+				>
+					<IcoChart data={transactions} stage={stage || 'all'} />
 				</Div>
+				<IcoList
+					filteredTransactions={filteredTransactions}
+					prices={prices}
+					page={page}
+					perPage={perPage}
+					totalPages={totalPages}
+					handlePerPage={this.handlePerPage}
+					handlePrevPage={this.handlePrevPage}
+					handleNextPage={this.handleNextPage}
+				/>
 			</TransactionsContainer>
 		);
 	}
@@ -297,7 +191,8 @@ const mapStateToProps = state => {
 		app: state.app,
 		transactions: state.transactions.data,
 		prices: state.transactions.prices,
-		stage: state.transactions.stage
+		stage: state.transactions.stage,
+		errors: state.transactions.errors
 	};
 };
 

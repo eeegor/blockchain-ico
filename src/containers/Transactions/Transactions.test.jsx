@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { Transactions } from './Transactions';
@@ -14,10 +15,16 @@ describe('Transactions', () => {
 	const getTransactions = jest.fn();
 	const transactions = [];
 	const stage = 'all';
+	const loading = false;
+	const prices = {
+		fetched: moment(new Date()).format('DD.MM.YY HH:mm:ss')
+	};
 	const props = {
 		getTransactions,
 		transactions,
-		stage
+		stage,
+		loading,
+		prices
 	};
 
 	it('renders Transactions', () => {
@@ -27,21 +34,25 @@ describe('Transactions', () => {
 
 	it('switches stage', () => {
 		const wrapper = mount(<Transactions {...props} />);
-		wrapper
-			.find('button')
-			.first()
-			.simulate('click');
-		expect(getTransactions).toHaveBeenCalledTimes(1);
+		setTimeout(() => {
+			wrapper
+				.find('button')
+				.first()
+				.simulate('click');
+			expect(getTransactions).toHaveBeenCalledTimes(1);
+		}, 1200);
 	});
 
 	it('shows prev transactions page', () => {
 		const wrapper = mount(<Transactions {...props} />);
-		wrapper
-			.find('.prev-page')
-			.first()
-			.simulate('click');
-		expect(getTransactions).toHaveBeenCalledTimes(1);
-		expect(wrapper.state().page).toEqual(1);
+		setTimeout(() => {
+			wrapper
+				.find('.prev-page')
+				.first()
+				.simulate('click');
+			expect(getTransactions).toHaveBeenCalledTimes(1);
+			expect(wrapper.state().page).toEqual(1);
+		}, 1200);
 	});
 
 	it('shows next transactions page', () => {
@@ -58,13 +69,15 @@ describe('Transactions', () => {
 			<Transactions {...props} transactions={transactions} />
 		);
 		wrapper.setState(state);
-		wrapper
-			.find('.next-page')
-			.first()
-			.simulate('click');
-		expect(getTransactions).toHaveBeenCalledTimes(1);
-		expect(wrapper.state().page).toEqual(2);
-		expect(wrapper.state().perPage).toEqual(2);
+		setTimeout(() => {
+			wrapper
+				.find('.next-page')
+				.first()
+				.simulate('click');
+			expect(getTransactions).toHaveBeenCalledTimes(1);
+			expect(wrapper.state().page).toEqual(2);
+			expect(wrapper.state().perPage).toEqual(2);
+		}, 1200);
 	});
 
 	it('handles items per page', () => {
@@ -81,11 +94,13 @@ describe('Transactions', () => {
 			<Transactions {...props} transactions={transactions} />
 		);
 		wrapper.setState(state);
-		wrapper
-			.find('.per-page')
-			.first()
-			.simulate('change', { target: { value: 99 } });
-		expect(wrapper.state().perPage).toEqual(99);
+		setTimeout(() => {
+			wrapper
+				.find('.per-page')
+				.first()
+				.simulate('change', { target: { value: 99 } });
+			expect(wrapper.state().perPage).toEqual(99);
+		}, 1200);
 	});
 
 	it('filters transactions by stage', () => {
@@ -123,7 +138,11 @@ describe('Transactions', () => {
 			<Transactions {...props} transactions={transactions} stage="ico" />
 		);
 		wrapper.setState(state);
-		const cards = wrapper.find('.transactions-list').find(CardTransaction);
-		expect(cards.length).toEqual(2);
+		setTimeout(() => {
+			const cards = wrapper
+				.find('.transactions-list')
+				.find(CardTransaction);
+			expect(cards.length).toEqual(2);
+		}, 1200);
 	});
 });

@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { actions } from '../actions';
 import { transactionReducer } from '.';
 
@@ -11,14 +12,16 @@ describe('transaction reducer', () => {
 		const nextState = transactionReducer(undefined, {
 			type: actions.GET_TRANSACTIONS_REQUEST
 		});
-		expect(nextState).toEqual({});
+		expect(nextState).toEqual({ errors: [] });
 	});
 
 	it('handles get transactions error', () => {
 		const nextState = transactionReducer(undefined, {
 			type: actions.GET_TRANSACTIONS_ERROR
 		});
-		expect(nextState).toEqual({});
+		expect(nextState).toEqual({
+			errors: ['Could not fetch transactions']
+		});
 	});
 
 	it('handles get transactions success', () => {
@@ -43,7 +46,8 @@ describe('transaction reducer', () => {
 					txid: '2329332hu3huhu',
 					address: '2332j3jnjnj'
 				}
-			]
+			],
+			errors: []
 		});
 	});
 
@@ -55,7 +59,8 @@ describe('transaction reducer', () => {
 			}
 		});
 		expect(nextState).toEqual({
-			stage: 'ico'
+			stage: 'ico',
+			errors: []
 		});
 	});
 
@@ -65,7 +70,8 @@ describe('transaction reducer', () => {
 			payload: {}
 		});
 		expect(nextState).toEqual({
-			stage: 'all'
+			stage: 'all',
+			errors: []
 		});
 	});
 
@@ -73,14 +79,18 @@ describe('transaction reducer', () => {
 		const nextState = transactionReducer(undefined, {
 			type: actions.GET_TRANSACTIONS_META_REQUEST
 		});
-		expect(nextState).toEqual({});
+		expect(nextState).toEqual({
+			errors: []
+		});
 	});
 
 	it('handles get transactions meta error', () => {
 		const nextState = transactionReducer(undefined, {
 			type: actions.GET_TRANSACTIONS_META_ERROR
 		});
-		expect(nextState).toEqual({});
+		expect(nextState).toEqual({
+			errors: ['Could not fetch transactions meta']
+		});
 	});
 
 	it('handles get transactions meta success', () => {
@@ -94,7 +104,8 @@ describe('transaction reducer', () => {
 						txid: '2329332hu3huhu',
 						address: '2332j3jnjnj'
 					}
-				]
+				],
+				errors: []
 			}
 		});
 		expect(nextState).toEqual({
@@ -105,7 +116,8 @@ describe('transaction reducer', () => {
 					txid: '2329332hu3huhu',
 					address: '2332j3jnjnj'
 				}
-			]
+			],
+			errors: []
 		});
 	});
 
@@ -118,7 +130,8 @@ describe('transaction reducer', () => {
 					BTC: 2,
 					LTC: 3,
 					USD: 4,
-					EUR: 5
+					EUR: 5,
+					fetched: moment(new Date()).format('DD.MM.YY HH:mm:ss')
 				}
 			}
 		});
@@ -128,8 +141,10 @@ describe('transaction reducer', () => {
 				BTC: 2,
 				LTC: 3,
 				USD: 4,
-				EUR: 5
-			}
+				EUR: 5,
+				fetched: moment(new Date()).format('DD.MM.YY HH:mm:ss')
+			},
+			errors: []
 		});
 	});
 });

@@ -15,7 +15,11 @@ module.exports = {
 		'!**/*._story.*',
 		'!**/*.story.*',
 		'!src/index.*',
-		'!src/store/index.*'
+		'!src/store/index.*',
+		'!src/containers/Transactions/IcoChart.jsx',
+		'!src/containers/Transactions/IcoList.jsx',
+		'!src/containers/Transactions/Transactions.jsx',
+		'!src/__playground/*'
 	],
 	// uncomment the following to make tests fail if coverage goals are not met
 	// coverageThreshold: {

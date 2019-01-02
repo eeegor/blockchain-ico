@@ -46,148 +46,9 @@ exports[`App renders App 1`] = `
     </div>
   </div>
   <div
-    className="Transactions__TransactionsContainer-tqvbin-0 doovul"
+    className="Loading-sc-1duxp80-0 kJEjOl"
   >
-    <div
-      className="Container-sc-7047k2-0 eGhcnj"
-    >
-      <h1
-        className="H1-dohnx-0 jhWXCn"
-      >
-        Ico summary
-      </h1>
-      <p
-        className="Text-sc-1268zyk-0 fgbjLp"
-      >
-        Follow the transactions through different stages of our ICO
-      </p>
-      <div
-        className="Grid-sc-1qbbgis-0 cQRDwl"
-      >
-        <button
-          className="Button-calp6v-0 kTJVaw"
-          onClick={[Function]}
-          selected={true}
-        >
-          All
-        </button>
-        <button
-          className="Button-calp6v-0 eXYyLH"
-          onClick={[Function]}
-          selected={false}
-        >
-          Pre Ico
-        </button>
-        <button
-          className="Button-calp6v-0 eXYyLH"
-          onClick={[Function]}
-          selected={false}
-        >
-          Ico
-        </button>
-        <button
-          className="Button-calp6v-0 eXYyLH"
-          onClick={[Function]}
-          selected={false}
-        >
-          Final Ico
-        </button>
-      </div>
-    </div>
-    <div
-      className="Container-sc-7047k2-0 eGhcnj"
-    >
-      <div
-        className="Bar-nijwhd-0 hUzrpe"
-      >
-        <div
-          className="Bar-nijwhd-0 Bar__BarInfo-nijwhd-1 LKrYM"
-        >
-          <p
-            className="TextSmall-nwg0bi-0 hPTyOV"
-          >
-            0
-             Transactions
-          </p>
-          <p
-            className="TextSmall-nwg0bi-0 hPTyOV"
-          >
-            Page 
-            1
-             / 
-            0
-          </p>
-        </div>
-        <div
-          className="Bar-nijwhd-0 Bar__BarControls-nijwhd-2 esEzcJ"
-        >
-          <div
-            className="Bar-nijwhd-0 iNQFDA"
-          >
-            <p
-              className="TextSmall-nwg0bi-0 eswchY"
-            >
-              Per page
-            </p>
-            <div
-              className="per-page Select-sc-1g17ytr-0 gjnxXC"
-              onChange={[Function]}
-              value={9}
-            >
-              <select>
-                <option
-                  value="9"
-                >
-                  9
-                </option>
-                <option
-                  value="30"
-                >
-                  30
-                </option>
-                <option
-                  value="60"
-                >
-                  60
-                </option>
-                <option
-                  value="99"
-                >
-                  99
-                </option>
-              </select>
-            </div>
-          </div>
-          <div
-            className="Bar-nijwhd-0 iWIeTY"
-          >
-            <button
-              className="prev-page Button-calp6v-0 jVRDlU"
-              onClick={[Function]}
-            >
-              Prev
-            </button>
-            <button
-              className="next-page Button-calp6v-0 kJMtKQ"
-              onClick={[Function]}
-            >
-              Next
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="Div-sc-172dig4-0 lioYCY"
-    >
-      <div
-        className="Container-sc-7047k2-0 eGhcnj"
-      >
-        <div
-          className="transactions-list Grid-sc-1qbbgis-0 iEabBZ"
-        />
-      </div>
-    </div>
+    Loading...
   </div>
   <div
     className="styleguide"
@@ -311,7 +172,7 @@ exports[`App renders App 1`] = `
               Default
             </p>
             <button
-              className="Button-calp6v-0 fPZLXC"
+              className="Button-calp6v-0 jlvZir"
             >
               Click me
             </button>
@@ -323,7 +184,7 @@ exports[`App renders App 1`] = `
               Outline
             </p>
             <button
-              className="Button-calp6v-0 hZtIPi"
+              className="Button-calp6v-0 GzDvF"
             >
               Click me
             </button>
@@ -335,7 +196,7 @@ exports[`App renders App 1`] = `
               Primary
             </p>
             <button
-              className="Button-calp6v-0 jVnxen"
+              className="Button-calp6v-0 wxSmE"
             >
               Click me
             </button>
@@ -347,7 +208,7 @@ exports[`App renders App 1`] = `
               Success
             </p>
             <button
-              className="Button-calp6v-0 jNWPSn"
+              className="Button-calp6v-0 kPWJtE"
             >
               Click me
             </button>
@@ -359,7 +220,7 @@ exports[`App renders App 1`] = `
               Danger
             </p>
             <button
-              className="Button-calp6v-0 jsFFlk"
+              className="Button-calp6v-0 gQuknj"
             >
               Click me
             </button>
@@ -371,7 +232,7 @@ exports[`App renders App 1`] = `
               Token
             </p>
             <button
-              className="Button-calp6v-0 eNqQXl"
+              className="Button-calp6v-0 jwgeKw"
             >
               Click me
             </button>

@@ -3,6 +3,9 @@ import { mergeData } from '../../../util';
 import { getTransactionsMeta } from './getTransactionsMeta';
 import { getTransactionsCurrentPrice } from './getTransactionsCurrentPrice';
 
+const LOCAL_URL = 'http://localhost:5000/db';
+const API_URL = 'https://blockchain.brickblock.io/inputs';
+
 const actions = {
 	GET_TRANSACTIONS_REQUEST: 'GET_TRANSACTIONS_REQUEST',
 	GET_TRANSACTIONS_SUCCESS: 'GET_TRANSACTIONS_SUCCESS',
@@ -62,9 +65,7 @@ export const getTransactions = () => dispatch => {
 	axios
 		.get(
 			/* istanbul ignore next */
-			isLocal
-				? 'http://localhost:5000/db'
-				: 'https://blockchain.brickblock.io/inputs'
+			isLocal ? LOCAL_URL : API_URL
 		)
 		.then(response => {
 			dispatch(getTransactionsSuccess({ response }));
