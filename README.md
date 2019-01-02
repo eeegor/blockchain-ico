@@ -58,7 +58,7 @@ The redux store is organized in feature based modules, each module brings it's o
 
 > **Info:** More about different ways to structure your `Redux` project [here](https://redux.js.org/faq/code-structure)
 
-## :link: Api's
+## :outbox_tray: Api's
 
 This app uses multiple api endpoints to receive data
 - Transactions
