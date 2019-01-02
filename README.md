@@ -1,6 +1,6 @@
 # React Blockchain Ico
 
-<!-- ![](preview.gif) -->
+![](20190101060243-blockchain-ico.gif)
 
 This is an example of a decoupled frontend app implemented with `React` and `Redux`, fetching data from multiple rest api endpoints
 
