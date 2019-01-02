@@ -66,6 +66,13 @@ export class Transactions extends Component {
 		}
 	}
 
+	componentDidCatch() {
+		this.setState(state => ({
+			...state,
+			errors: [...state.errors, 'Something went wrong, please try again']
+		}));
+	}
+
 	selectStage = (event, stage = 'all') => {
 		event && event.preventDefault();
 		const { setTransactionStage } = this.props;
@@ -132,7 +139,7 @@ export class Transactions extends Component {
 			Math.ceil(filteredTransactions.length / perPage);
 		const isMobile = windowMaxWidth() < theme.media.tablet;
 
-		if (loading || !transactions[0]) {
+		if (loading || !filterTransactions || filterTransactions.length < 1) {
 			return <Loading>Loading...</Loading>;
 		}
 
