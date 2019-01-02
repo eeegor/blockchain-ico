@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { helperMargin } from './helperMargin';
 import { helperPadding } from './helperPadding';
 import { theme } from './theme';
+import { Button } from './Button';
+import { Select } from './Select';
 
 export const Bar = styled.div`
 	display: flex;
@@ -45,6 +47,11 @@ export const BarInfo = styled(Bar)`
 `;
 
 export const BarControls = styled(Bar)`
+	${Button},
+	${Select} select {
+		height: 42px;
+	}
+
 	@media (max-width: ${theme.media.tablet - 1}px) {
 		width: 100%;
 		justify-content: space-between;

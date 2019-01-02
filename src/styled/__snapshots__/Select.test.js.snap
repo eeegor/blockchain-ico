@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders default select 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c0::after {
+  position: absolute;
+  content: '';
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%);
+  border: 6px solid transparent;
+  border-color: #ebf0ff transparent transparent transparent;
+}
+
+.c0 select {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 4px 36px 4px 12px;
+  border: 1px solid #ebf0ff;
+  background: #fff;
+  position: relative;
+  color: #2B60FF;
+  font-family: GTCinetype-Bold;
+}
+
+.c0 select::-ms-expand {
+  display: none;
+}
+
+<div
+  className="c0"
+>
+  <option
+    value="one"
+  >
+    One
+  </option>
+</div>
+`;

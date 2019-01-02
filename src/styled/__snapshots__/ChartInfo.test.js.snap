@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartInfo renders chart wrapper 1`] = `
+.c0 {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 0;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 .c1 {
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 75%;
+  opacity: 0.5;
+}
+
+@media (min-width:767px) {
+  .c0 {
+    padding: 24px 0 12px 0;
+  }
+}
+
+<div
+  className="c0"
+>
+  Info
+</div>
+`;

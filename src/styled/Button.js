@@ -10,7 +10,7 @@ export const Button = styled.button`
   outline: 0;
   background: #fff;
   color: ${theme.colors.buttonPrimary};
-  padding: 0.75rem 3rem;
+  padding: 12px 36px;
   border-radius: ${theme.borderRadius}px;
   font-size: 13px;
   letter-spacing: 1.18px;

@@ -17,12 +17,10 @@ export const Select = styled.div`
 		right: 1rem;
 		transform: translateY(-30%);
 		border: 6px solid transparent;
-		border-color: ${lighten(
-			0.35,
-			theme.colors.buttonPrimaryBg
-		)} transparent transparent transparent;
+		border-color: ${lighten(0.35, theme.colors.buttonPrimaryBg)} transparent
+			transparent transparent;
 	}
-  
+
 	select {
 		width: 100%;
 		-webkit-appearance: none;
@@ -32,18 +30,18 @@ export const Select = styled.div`
 		border-radius: ${theme.borderRadius}px;
 		font-size: 13px;
 		line-height: 24px;
-		padding: 12px 36px 12px 12px;
+		padding: 4px 36px 4px 12px;
 		border: 1px solid ${lighten(0.35, theme.colors.buttonPrimaryBg)};
 		background: #fff;
 		position: relative;
 		color: ${theme.colors.buttonPrimary};
 		font-family: ${theme.fonts.gtCinetypeBold};
-	  
-		&::-ms-expand {
-		  display: none;
-		}
-	  }
 
-  ${props => helperMargin(props)}
-  ${props => helperPadding(props)}
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
+	${props => helperMargin(props)}
+	${props => helperPadding(props)}
 `;

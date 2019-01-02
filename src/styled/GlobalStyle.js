@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { theme } from './theme';
+import { semiotic } from './semiotic';
 
 export const fontFamilies = `
   @font-face {
@@ -114,4 +115,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${theme.fonts.gtCinetypeBold};
     color: ${theme.colors.primaryDarkBlue};
   }
+
+  ${semiotic}
 `;

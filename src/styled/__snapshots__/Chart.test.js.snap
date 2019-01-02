@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart renders chart wrapper 1`] = `
+.c0 {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 7000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+.c0 .frame {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="c0"
+>
+  Info
+</div>
+`;
+
+exports[`Chart renders chart wrapper with max width 1`] = `
+.c0 {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 7000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(0,0,0);
+  max-width: 100px !important;
+}
+
+.c0 .frame {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="c0"
+>
+  Info
+</div>
+`;
